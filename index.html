@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ff85ad">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>کالیمبای نیایش</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-screen="play">
+  <div class="sky" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <i></i>
+  </div>
+  <section id="welcome" class="welcome">
+    <div class="card welcome-card">
+      <h1 id="welcomeTitle"></h1>
+      <p id="sweet" class="sweet"></p>
+      <p id="welcomeText"></p>
+      <button id="startBtn" class="btn" type="button"></button>
+    </div>
+  </section>
+  <div id="app" class="app" hidden>
+    <header class="top"><h1 id="brand"></h1><p id="sweetLive" class="sweet"></p></header>
+    <div class="stage">
+      <div class="board">
+        <canvas id="kalimba" width="720" height="1100" aria-label="kalimba"></canvas>
+        <div class="transport">
+          <button id="btnRecord" class="btn" type="button"></button>
+          <button id="btnPause" class="btn" type="button"></button>
+          <button id="btnStop" class="btn" type="button"></button>
+          <button id="btnPlay" class="btn" type="button"></button>
+          <button id="btnLoop" class="btn ghost" type="button"></button>
+        </div>
+        <div class="meter">
+          <span id="clock">۰:۰۰</span>
+          <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+        </div>
+      </div>
+      <aside class="sheet">
+        <nav class="tabs">
+          <button type="button" data-tab="play" class="on"></button>
+          <button type="button" data-tab="notes"></button>
+          <button type="button" data-tab="songs"></button>
+          <button type="button" data-tab="settings"></button>
+        </nav>
+        <p id="gift" class="gift" hidden></p>
+        <div id="panel"></div>
+      </aside>
+    </div>
+  </div>
+  <div id="modal" class="modal" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+  <input id="restore" type="file" accept="application/json,.json" hidden>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
